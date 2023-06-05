@@ -1,0 +1,8 @@
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\bin\Debug\ConsoleC#Stephane.exe.config
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\bin\Debug\ConsoleC#Stephane.exe
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\bin\Debug\ConsoleC#Stephane.pdb
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.csproj.AssemblyReference.cache
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.csproj.SuggestedBindingRedirects.cache
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.csproj.CoreCompileInputs.cache
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.exe
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.pdb
