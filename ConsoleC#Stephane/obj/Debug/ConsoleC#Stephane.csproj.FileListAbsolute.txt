@@ -6,3 +6,6 @@ C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Deb
 C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.csproj.CoreCompileInputs.cache
 C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.exe
 C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.pdb
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stephane.chevrier\Documents\ConsoleC#Stephane\ConsoleC#Stephane\obj\Debug\ConsoleC#Stephane.csproj.CopyComplete

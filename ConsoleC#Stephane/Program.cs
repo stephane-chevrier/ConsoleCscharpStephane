@@ -1,18 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using extension;
+using System;
+
+// Exemple de method d'extension d'une class (dans ce cas String)
+namespace extension
+{
+    public static class StringExtension
+    {
+        public static int CountIndexA(this string str)
+        {
+            return str.IndexOf("A");
+        }
+    }
+}
+
 
 namespace ConsoleC_Stephane
 {
-    class Calculator
+    public class Calculator
     {
         public static double DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
+            // valeur par defaut en cas d'erreur
+            double result = double.NaN; 
 
-            // Use a switch statement to do the math.
+            // Switch a(ddition), s(oustraction), m(ultiplication), d(ivision)
             switch (op)
             {
                 case "a":
@@ -25,13 +36,15 @@ namespace ConsoleC_Stephane
                     result = num1 * num2;
                     break;
                 case "d":
-                    // Ask the user to enter a non-zero divisor.
+
+                    // Si pas division par zero
                     if (num2 != 0)
                     {
                         result = num1 / num2;
                     }
                     break;
-                // Return text for an incorrect option entry.
+
+                // Retour si saisie différente de a, m, s, d
                 default:
                     break;
             }
@@ -43,46 +56,49 @@ namespace ConsoleC_Stephane
         static void Main(string[] args)
         {
             bool endApp = false;
-            // Display title as the C# console calculator app.
-            Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
+
+            // Initialisation affichage
+            String textTitre = "Calculatrice en console en C#\r";
+            int nbreA = textTitre.CountIndexA;
+            Console.WriteLine(textTitre);
+            Console.WriteLine("-----------------------------\n");
 
             while (!endApp)
             {
-                // Declare variables and set to empty.
+                // Declaration variables
                 string numInput1 = "";
                 string numInput2 = "";
                 double result = 0;
 
-                // Ask the user to type the first number.
-                Console.Write("Type a number, and then press Enter: ");
+                // Saisie du 1er nombre
+                Console.Write("Saisir un 1er nombre et appuez sur entrée : ");
                 numInput1 = Console.ReadLine();
 
                 double cleanNum1 = 0;
                 while (!double.TryParse(numInput1, out cleanNum1))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    Console.Write("Ce n'est pas un nombre, saisir un nombre : ");
                     numInput1 = Console.ReadLine();
                 }
 
-                // Ask the user to type the second number.
-                Console.Write("Type another number, and then press Enter: ");
+                // Saisie du 2ème nombre
+                Console.Write("Saisir un 2eme nombre et appuez sur entrée : ");
                 numInput2 = Console.ReadLine();
 
                 double cleanNum2 = 0;
                 while (!double.TryParse(numInput2, out cleanNum2))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    Console.Write("Ce n'est pas un nombre, saisir un nombre : ");
                     numInput2 = Console.ReadLine();
                 }
 
-                // Ask the user to choose an operator.
-                Console.WriteLine("Choose an operator from the following list:");
-                Console.WriteLine("\ta - Add");
-                Console.WriteLine("\ts - Subtract");
-                Console.WriteLine("\tm - Multiply");
-                Console.WriteLine("\td - Divide");
-                Console.Write("Your option? ");
+                // Saisir un opérateur
+                Console.WriteLine("Choisissez un opérateur parmi la liste :");
+                Console.WriteLine("\ta - Adition");
+                Console.WriteLine("\ts - Soustraction");
+                Console.WriteLine("\tm - Multiplication");
+                Console.WriteLine("\td - Division");
+                Console.Write("Saisir votre choix et appuez sur entrée : ");
 
                 string op = Console.ReadLine();
 
@@ -91,20 +107,20 @@ namespace ConsoleC_Stephane
                     result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
-                        Console.WriteLine("This operation will result in a mathematical error.\n");
+                        Console.WriteLine("Cette opération n'est pas possible.\n");
                     }
-                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                    else Console.WriteLine("Résultat: {0:0.##}\n", result);
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                    Console.WriteLine("Une exceptiona été rencontrée.\n - Details: " + e.Message);
                 }
 
                 Console.WriteLine("------------------------\n");
 
                 // Wait for the user to respond before closing.
-                Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-                if (Console.ReadLine() == "n") endApp = true;
+                Console.Write("Saisir 'q' + entrée pour sortir, ou appuez sur entrée pour continuer: ");
+                if (Console.ReadLine() == "q") endApp = true;
 
                 Console.WriteLine("\n"); // Friendly linespacing.
             }
